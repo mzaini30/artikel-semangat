@@ -1,4 +1,10 @@
 extends base.pug
 
+mixin item(judul, link)
+	a.list-group-item.list-group-item-action(href=`artikel/${link}.html`) #{judul}
+
 block isi
-	p Hello World
+	.m-3
+		.list-group
+			+item("Selalu Semangat", "semangat")
+			+item("Pentingnya Kedisiplinan", "disiplin")
